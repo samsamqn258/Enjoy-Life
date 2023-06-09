@@ -28,6 +28,7 @@ let musicIndex = Math.floor(Math.random() * allMusic.length + 1);
 isMusicPaused = true;
 window.addEventListener("load", () => {
     loadMusic(musicIndex);
+    playingSong();
 });
 // render music and name, img , singer
 function loadMusic(indexNumb) {
@@ -58,6 +59,7 @@ function nextMusic() {
     musicIndex > allMusic.length ? (musicIndex = 1) : (musicIndex = musicIndex);
     loadMusic(musicIndex);
     playMusic();
+    playingSong();
 }
 // prev music function
 function prevMusic() {
@@ -65,6 +67,7 @@ function prevMusic() {
     musicIndex < 1 ? (musicIndex = allMusic.length) : (musicIndex = musicIndex);
     loadMusic(musicIndex);
     playMusic();
+    playingSong();
 }
 // bắt sự kiện click vào nút next
 nextBtn.addEventListener("click", () => {
@@ -162,6 +165,7 @@ mainAudio.addEventListener("ended", () => {
             musicIndex = randMusic;
             loadMusic(musicIndex);
             playMusic();
+            playingSong();
             break;
     }
 });
@@ -209,14 +213,37 @@ for (let i = 0; i < allMusic.length; i++) {
             totalSec = `0${totalSec}`;
         }
         liAudioDurationTag.innerText = `${totalMin}:${totalSec}`;
+        liAudioDurationTag.setAttribute(
+            "t-duration",
+            `${totalMin}:${totalSec}`
+        );
     });
 }
 
 // hàm phát bài hát cụ thể khi click vào thẻ li trong danh sách
 function playingSong() {
-    const allLiTag = ul.querySelector("li");
+    const allLiTag = ulTag.querySelectorAll("li");
     for (let j = 0; j < allLiTag.length; j++) {
         let audioTag = allLiTag[j].querySelector(".audio-duration");
-        console.log(audioTag);
+        if (allLiTag[j].classList.contains("playing")) {
+            allLiTag[j].classList.remove("playing");
+            let adDuration = audioTag.getAttribute("t-duration");
+            audioTag.innerText = adDuration;
+        }
+
+        if (allLiTag[j].getAttribute("li-index") == musicIndex) {
+            allLiTag[j].classList.add("playing");
+            audioTag.innerText = "Playing";
+        }
+
+        allLiTag[j].setAttribute("onclick", "clicked(this)");
     }
+}
+
+function clicked(element) {
+    let getLiIndex = element.getAttribute("li-index");
+    musicIndex = getLiIndex;
+    loadMusic(musicIndex);
+    playMusic();
+    playingSong();
 }

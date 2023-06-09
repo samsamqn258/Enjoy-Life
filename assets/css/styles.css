@@ -266,9 +266,7 @@ body {
 }
 
 .music-list ul li .row span {
-    display: inline-block;
     margin-top: 12px;
-    color: var(--darkblack);
     font-size: 19px;
 }
 
@@ -280,13 +278,10 @@ ul li .audio-duration {
     font-size: 16px;
 }
 
-ul li .playing {
+ul li.playing {
     pointer-events: none;
     color: var(--white);
-    background: linear-gradient(var(--pink) 0%, var(--violet) 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+   
 }
 
 .volume-slider {
