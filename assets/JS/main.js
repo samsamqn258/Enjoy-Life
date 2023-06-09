@@ -34,8 +34,8 @@ window.addEventListener("load", () => {
 function loadMusic(indexNumb) {
     musicName.innerText = allMusic[indexNumb - 1].name;
     musicSinger.innerText = allMusic[indexNumb - 1].singer;
-    musicImg.src = `/assets/img/${allMusic[indexNumb - 1].src}.jpg`;
-    mainAudio.src = `/assets/music/${allMusic[indexNumb - 1].src}.mp3`;
+    musicImg.src = `./assets/img/${allMusic[indexNumb - 1].src}.jpg`;
+    mainAudio.src = `./assets/music/${allMusic[indexNumb - 1].src}.mp3`;
 }
 
 // play music function
@@ -182,9 +182,9 @@ volumeRange.addEventListener("input", function () {
 
     // Thay đổi biểu tượng theo mức âm lượng
     if (volume == 0) {
-        volumeIcon.style.backgroundImage = "url(/assets/icon/volume_off.svg)";
+        volumeIcon.style.backgroundImage = "url(./assets/icon/volume_off.svg)";
     } else {
-        volumeIcon.style.backgroundImage = "url(/assets/icon/volume_up.svg)";
+        volumeIcon.style.backgroundImage = "url(./assets/icon/volume_up.svg)";
     }
 });
 
@@ -194,7 +194,7 @@ for (let i = 0; i < allMusic.length; i++) {
         <span>${allMusic[i].name}</span>
         <p>${allMusic[i].singer}</p>
     </div>
-    <audio class="${allMusic[i].src}" src="/assets/music/${
+    <audio class="${allMusic[i].src}" src="./assets/music/${
         allMusic[i].src
     }.mp3"></audio>
     <span id = "${allMusic[i].src}"class="audio-duration">3:40</span>
