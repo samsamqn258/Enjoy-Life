@@ -120,7 +120,8 @@ progressArea.addEventListener("click", (e) => {
     // tính giá trị của thời gian hiện tại mà khi click vào thanh thì ta tính
     // lấy cái giá trị click vào chia cho tổng của cái thanh nhân cho tổng thời gian của
     // bài hát
-    mainAudio.currentTime = (clickedOffsetX / progressWidth) * songDuration;
+    let totalCurrent = (clickedOffsetX / progressWidth) * songDuration;
+    mainAudio.currentTime = totalCurrent;
     playMusic();
 });
 
