@@ -1,0 +1,80 @@
+let allMusic = [
+    {
+        name: "Chỉ một đêm nữa thôi",
+        singer: "RPT MCK, tlinh",
+        src: "music-1",
+        img: "music-1",
+    },
+    {
+        name: "Có Em",
+        singer: "Madihu, Low G",
+        src: "music-2",
+        img: "music-2",
+    },
+    {
+        name: "Hay Là Mình Yêu Nhau Nhé",
+        singer: "Adeline (Ánh Tuyết)",
+        src: "music-3",
+        img: "music-3",
+    },
+    {
+        name: "Hoa Cỏ Lau",
+        singer: "Phong Max",
+        src: "music-4",
+        img: "music-4",
+    },
+    {
+        name: "Nếu Lúc Đó",
+        singer: "tlinh, 2pillz",
+        src: "music-5",
+        img: "music-5",
+    },
+    {
+        name: "Nghe Như Tình Yêu",
+        singer: "HIEUTHUHAI",
+        src: "music-6",
+        img: "music-6",
+    },
+    {
+        name: "Soda",
+        singer: "RPT MCK, GC",
+        src: "music-7",
+        img: "music-7",
+    },
+    {
+        name: "Summertime",
+        singer: "Cinnamons, Evening Cinema",
+        src: "music-8",
+        img: "music-8",
+    },
+    {
+        name: "Tháng mấy anh nhớ em",
+        singer: "Hà Anh Tuấn",
+        src: "music-9",
+        img: "music-9",
+    },
+    {
+        name: "Nấu ăn cho em",
+        singer: "Đen, PiaLinh",
+        src: "music-10",
+        img: "music-10",
+    },
+    {
+        name: "Đừng Về Trễ (Acoustic Version)",
+        singer: "Sơn Tùng M-TP",
+        src: "music-11",
+        img: "music-11",
+    },
+    {
+        name: "Don't Côi",
+        singer: "RPT Orijinn, Ronboogz",
+        src: "music-12",
+        img: "music-12",
+    },
+    {
+        name: "Chìm Sâu",
+        singer: " RPT MCK, Trung Trần",
+        src: "music-13",
+        img: "music-13",
+    },
+];
